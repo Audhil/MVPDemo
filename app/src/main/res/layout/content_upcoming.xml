@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="upcoming_movie"
+            type="com.audhil.medium.mvpdemo.data.model.db.UpcomingMoviesEntity" />
+
+    </data>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.audhil.medium.mvpdemo.ui.customviews.DubaiMediumTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/overview"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <com.audhil.medium.mvpdemo.ui.customviews.DubaiTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="5dp"
+                android:text="@{upcoming_movie.overview ?? @string/no_data_to_show }"
+                android:textSize="14sp" />
+
+
+            <com.audhil.medium.mvpdemo.ui.customviews.DubaiMediumTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/title"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <com.audhil.medium.mvpdemo.ui.customviews.DubaiTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="5dp"
+                android:text="@{upcoming_movie.title ?? @string/no_data_to_show}"
+                android:textSize="14sp" />
+
+            <com.audhil.medium.mvpdemo.ui.customviews.DubaiMediumTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/original_title"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <com.audhil.medium.mvpdemo.ui.customviews.DubaiTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="5dp"
+                android:text="@{upcoming_movie.originalTitle ?? @string/no_data_to_show}"
+                android:textSize="14sp" />
+
+            <com.audhil.medium.mvpdemo.ui.customviews.DubaiMediumTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/original_language"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <com.audhil.medium.mvpdemo.ui.customviews.DubaiTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="5dp"
+                android:text="@{upcoming_movie.originalLanguage ?? @string/no_data_to_show}"
+                android:textSize="14sp" />
+
+            <com.audhil.medium.mvpdemo.ui.customviews.DubaiMediumTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/vote_count"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <com.audhil.medium.mvpdemo.ui.customviews.DubaiTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="5dp"
+                android:text="@{``+upcoming_movie.voteCount ?? @string/no_data_to_show}"
+                android:textSize="14sp" />
+
+            <com.audhil.medium.mvpdemo.ui.customviews.DubaiMediumTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/release_date"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <com.audhil.medium.mvpdemo.ui.customviews.DubaiTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="5dp"
+                android:text="@{upcoming_movie.releaseDate ?? @string/no_data_to_show}"
+                android:textSize="14sp" />
+
+            <com.audhil.medium.mvpdemo.ui.customviews.DubaiMediumTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/back_drop_path"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <com.audhil.medium.mvpdemo.ui.customviews.DubaiTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="5dp"
+                android:text="@{upcoming_movie.backdropPath ?? @string/no_data_to_show}"
+                android:textSize="14sp" />
+
+            <com.audhil.medium.mvpdemo.ui.customviews.DubaiMediumTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/poster_path"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <com.audhil.medium.mvpdemo.ui.customviews.DubaiTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="5dp"
+                android:text="@{upcoming_movie.posterPath ?? @string/no_data_to_show}"
+                android:textSize="14sp" />
+
+            <com.audhil.medium.mvpdemo.ui.customviews.DubaiMediumTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/video"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <com.audhil.medium.mvpdemo.ui.customviews.DubaiTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="5dp"
+                android:text="@{``+upcoming_movie.video ?? @string/no_data_to_show}"
+                android:textSize="14sp" />
+
+            <com.audhil.medium.mvpdemo.ui.customviews.DubaiMediumTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/popularity"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <com.audhil.medium.mvpdemo.ui.customviews.DubaiTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="5dp"
+                android:text="@{``+upcoming_movie.popularity ?? @string/no_data_to_show}"
+                android:textSize="14sp" />
+
+            <com.audhil.medium.mvpdemo.ui.customviews.DubaiMediumTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/is_adult"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <com.audhil.medium.mvpdemo.ui.customviews.DubaiTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="5dp"
+                android:text="@{upcoming_movie.adult ? @string/yes:@string/no}"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</layout>

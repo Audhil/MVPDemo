@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/base_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/movie_txt_input_layout"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!--<android.support.design.widget.TextInputEditText-->
+            <com.audhil.medium.mvpdemo.ui.customviews.DubaiTextInputEditText
+                android:id="@+id/movie_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/search_by_name_or_year"
+                android:maxLines="1" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <com.audhil.medium.mvpdemo.ui.customviews.DubaiBoldButton
+            android:id="@+id/popular_btn"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:paddingBottom="5dp"
+            android:paddingEnd="20dp"
+            android:paddingStart="20dp"
+            android:paddingTop="5dp"
+            android:text="@string/popular"
+            android:textAllCaps="false"
+            android:textColor="@color/txt_gray"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@id/top_rated_btn"
+            app:layout_constraintTop_toBottomOf="@id/movie_txt_input_layout" />
+
+        <com.audhil.medium.mvpdemo.ui.customviews.DubaiBoldButton
+            android:id="@+id/top_rated_btn"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingBottom="5dp"
+            android:paddingEnd="20dp"
+            android:paddingStart="20dp"
+            android:paddingTop="5dp"
+            android:text="@string/top_rated"
+            android:textAllCaps="false"
+            android:textColor="@color/txt_gray"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/popular_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/movie_txt_input_layout" />
+
+        <com.audhil.medium.mvpdemo.ui.customviews.DubaiBoldButton
+            android:id="@+id/upcoming_btn"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:paddingBottom="5dp"
+            android:paddingEnd="20dp"
+            android:paddingStart="20dp"
+            android:paddingTop="5dp"
+            android:text="@string/upcoming"
+            android:textAllCaps="false"
+            android:textColor="@color/txt_gray"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/top_rated_btn"
+            app:layout_constraintTop_toBottomOf="@id/movie_txt_input_layout" />
+
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/popular_btn" />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

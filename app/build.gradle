@@ -1,0 +1,85 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+    buildToolsVersion rootProject.buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.audhil.medium.mvpdemo"
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    dataBinding {
+        enabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'com.android.support:appcompat-v7:' + rootProject.supportLibVersion,
+            'com.android.support:design:' + rootProject.supportLibVersion,
+            'com.android.support:cardview-v7:' + rootProject.supportLibVersion,
+            'com.android.support:recyclerview-v7:' + rootProject.supportLibVersion,
+            'com.android.support.constraint:constraint-layout:' + rootProject.constraintLayoutVersion,
+
+            //  kotlin
+            "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version",
+
+            //  dagger 2
+            'com.google.dagger:dagger:' + rootProject.dagger2Version,
+
+            //  life cycle components
+            'android.arch.lifecycle:extensions:' + rootProject.archLifecycleVersion,
+
+            //  room lib
+            'android.arch.persistence.room:runtime:' + rootProject.archRoomVersion,
+            'android.arch.persistence.room:rxjava2:' + rootProject.archRoomVersion,
+
+            //  rxjava 2
+            'io.reactivex.rxjava2:rxjava:' + rootProject.rxJava2Version,
+            'io.reactivex.rxjava2:rxandroid:' + rootProject.rxAndroidVersion,
+
+            //  retrofit 2
+            'com.squareup.retrofit2:retrofit:' + rootProject.retrofit2Version,
+            'com.squareup.retrofit2:converter-gson:' + rootProject.retrofit2Version,
+            'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:' + rootProject.rxJavaAdapterVersion,
+            'com.squareup.okhttp3:logging-interceptor:' + rootProject.retrofit2LoggingVersion
+
+    //  glide
+    implementation('com.github.bumptech.glide:glide:' + rootProject.glideVersion) {
+        exclude group: "com.android.support"
+    }
+
+    kapt 'android.arch.lifecycle:compiler:' + rootProject.archLifecycleVersion,
+            //  room lib
+            'android.arch.persistence.room:compiler:' + rootProject.archRoomVersion,
+            //  dagger 2
+            'com.google.dagger:dagger-compiler:' + rootProject.dagger2Version,
+            //  Glide
+            'com.github.bumptech.glide:compiler:' + rootProject.glideVersion
+
+    //  test case deps
+    testImplementation 'junit:junit:' + rootProject.jUnitVersion
+    androidTestImplementation 'com.android.support.test:runner:' + rootProject.testRunnerVersion,
+            'com.android.support.test.espresso:espresso-core:' + rootProject.espressoVersion
+}

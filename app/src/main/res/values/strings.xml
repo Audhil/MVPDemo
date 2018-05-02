@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">MVPDemo</string>
+
+    <string name="popular">Popular</string>
+    <string name="top_rated">Top Rated</string>
+    <string name="upcoming">Upcoming</string>
+    <string name="search_movie">Search movie...</string>
+    <string name="movie_poster">Movie Poster</string>
+
+    <string name="no_data_to_show">No data to show.</string>
+
+    <string name="no_results">No results.</string>
+
+    <string name="search_by_name_or_year">Search by name or year</string>
+
+    <string name="prev">Previous</string>
+    <string name="next">Next</string>
+
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+    <string name="overview">Overview</string>
+    <string name="title">Title</string>
+    <string name="original_title">Original Title</string>
+    <string name="original_language">Original Language</string>
+    <string name="release_date">Release Date</string>
+    <string name="back_drop_path">Back Drop path</string>
+    <string name="vote_count">Vote Count</string>
+    <string name="poster_path">Poster Path</string>
+    <string name="video">Video</string>
+    <string name="popularity">Popularity</string>
+    <string name="is_adult">Is Adult?</string>
+
+</resources>
