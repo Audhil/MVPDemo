@@ -19,4 +19,4 @@ This is just a demo app exploring MoviesDB API, it involves,
 2. "Search" Movies recycler view by Name or Movie Release year.
 3. Endless scroll(Infinite scroll) recycler view - pagination.
 
-Sample APK : https://drive.google.com/open?id=1Nd1yrhHWvtcx_D32apmGjJ7St3WDt48Q
+Sample APK : https://drive.google.com/open?id=1CgiqLISx9sdGeAQag3ksqi5hvu6B_lWm
